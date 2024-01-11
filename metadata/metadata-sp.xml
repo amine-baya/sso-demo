@@ -1,0 +1,34 @@
+<EntityDescriptor
+ xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+ xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+ xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+ entityID="http://localhost:3000/sp">
+<SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
+	WantAssertionsSigned="true" 
+	AuthnRequestsSigned="true"
+	>
+        <KeyDescriptor use="signing">
+            <KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+                <X509Data>
+			<X509Certificate>
+MIICUDCCAbmgAwIBAgIBADANBgkqhkiG9w0BAQ0FADBFMQswCQYDVQQGEwJrZTEQ
+MA4GA1UECAwHTmFpcm9iaTEQMA4GA1UECgwHVGVzdCBTUDESMBAGA1UEAwwJbG9j
+YWxob3N0MB4XDTIzMTIxMzE5MTIwOFoXDTI0MTIxMjE5MTIwOFowRTELMAkGA1UE
+BhMCa2UxEDAOBgNVBAgMB05haXJvYmkxEDAOBgNVBAoMB1Rlc3QgU1AxEjAQBgNV
+BAMMCWxvY2FsaG9zdDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAs4z+m8qw
+LMzFH/gBSzdyD4vVKSgyN5bj60nzncZVpcajIEqAP5smMux1zcoY3skh3jg10DtG
+amuHLZTEqejUaF70yMQMDTQKmvR9HjkKCRQQkVa6D+Z3kgkGExwjnvSsZEa8ZC89
+faRg5LkAIy5l9a6eM7bnDYHC8eW/jWWWwXcCAwEAAaNQME4wHQYDVR0OBBYEFAde
+kRKIxkeQetmeR3rNGhIlaCDZMB8GA1UdIwQYMBaAFAdekRKIxkeQetmeR3rNGhIl
+aCDZMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQENBQADgYEAJ1yrNKb7UdIt0rLG
+7+3z22xh47ZDhWAZzjsbFwgWxMLGlbgD8pJgFdIIFpixQs3bDBUjD/XX9x3sqUF6
+5NmbgmGMyb8l0lhgyVCdWl+EwkxovXSYJ5JKaXAHKl5MDaWHq1mb2aaUn0i5V1Ic
+7NiySalMTJuDUoG/P3lZ8+/kOTk=
+			</X509Certificate>
+                </X509Data>
+            </KeyInfo>
+        </KeyDescriptor>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+	<AssertionConsumerService isDefault="true" index="0" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost:3000/sp/acs"/>
+    </SPSSODescriptor>
+</EntityDescriptor>
